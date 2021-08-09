@@ -1,8 +1,9 @@
 # 记录
 
 1、map object的区别
-   map删除一项,object删除一项
-   map获取长度,object获取长度
+
+   map删除一项,object删除一项\n
+   map获取长度,object获取长度\n
 :object只能用字符串、数字、symbol做key,map可以是任意类型
  填入map的数据,会保持原有的顺序，而Object无法做到
  map可以通过for...of迭代,object不可以
@@ -14,19 +15,24 @@
  object长度:Object.keys().lenght
 
 2、set是什么,有什么优势
+
 :集合,每一项是唯一的,可迭代,相对于数组来说增加元素、删除元素、查找元素更快
 
 3、for in  和  for of 
+
 :for...in用来遍历对象的键名,for...of一般用来遍历array的键值
 for...in语句以任意顺序迭代对象的[可枚举属性],for...of 语句遍历[可迭代对象]定义要迭代的数据。
 
 4、js基本数据类型
+
 :string number bool undefined null symbol bigint
 
 5、undefined 和 null 的区别
+
 :null表示“没有对象”,即该处不应该有值,undefined表示“缺少值”,即该处应该有值,但还没有定义
 
 6、var 和 let   let和const    const定义一个对象,可以修改里面的项吗 const a = {b:1}; a.b = 2;
+
 :var存在变量提升,let必须先声明再使用
  var是全局作用域,let有块级作用域概念
  
@@ -37,10 +43,12 @@ for...in语句以任意顺序迭代对象的[可枚举属性],for...of 语句遍
 
 
 7、暂存性死区
+
 :let声明不会被提升到当前执行上下文的顶部，从该块级作用域开始，到初始化位置，称作“暂存死区”，所以在对于a的暂存死区中使用a会报Reference错误
 
 
 8、在浏览器定义一个var 和 在node中定义一个var 有什么区别
+
 :在 HTML 中, 全局作用域是针对 window 对象，var关键字定义的全局作用域变量属于 window 对象，而let定义的不属于。注意这是在浏览器环境下，如果是Node则无window对象。
 `
 var a = 0;
@@ -50,9 +58,11 @@ console.log(window.b) // undefined
 `
 
 9、scss样式如何局部应用,原理
+
 添加scoped属性,会给每一个标签添加data属性
 
 10、webpack配置如何解析scss
+
 `
 module.exports = {
   module: {
@@ -73,6 +83,7 @@ module.exports = {
 
 
 11、babel是什么,原理
+
 :babel是一个 JavaScript 编译器,主要用于将采用 ECMAScript 2015+ 语法编写的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中
 
 1.解析
