@@ -1,3 +1,15 @@
+### 概念分析
+模块热替换(hot module replacement 或 HMR)是 webpack 提供的最有用的功能之一。它允许在运行时更新所有类型的模块，而无需完全刷新。
+
+主要是通过以下几种方式，来显著加快开发速度：
+
+1. 保留在完全重新加载页面期间丢失的应用程序状态。
+2. 只更新变更内容，以节省宝贵的开发时间。
+3. 在源代码中 CSS/JS 产生修改时，会立刻在浏览器中进行更新，这几乎相当于在浏览器devtools直接更改样式。
+
+注意：HMR只能被应用到开发环境中。
+
+
 ### HMR工作流程分析
 
 webpack监听到项目中文件或者模块的代码有修改后，由webpack.HotModuleReplacementPlugin插件生成hot-update.json和hot-update.js补丁文件，然后客户端通过socket连接得到补丁文件，最后由
